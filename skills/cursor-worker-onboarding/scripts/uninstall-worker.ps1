@@ -52,7 +52,8 @@ if ($RemoveWorkspaceMemory -and (Test-Path -LiteralPath $memoryPath)) {
   } else {
     $updated = $content.Trim()
   }
-  if ($updated.Length -eq 0) {
+  $onlyGeneratedHeader = $updated -match "(?s)^# Cursor Workspace Roots\s*This file is maintained by the Cursor Worker onboarding skill\.\s*$"
+  if ($updated.Length -eq 0 -or $onlyGeneratedHeader) {
     Remove-Item -LiteralPath $memoryPath -Force
     Write-Host "Removed generated workspace memory file: $memoryPath"
   } else {
