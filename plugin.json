@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cursor-worker-onboarding",
+  "description": "Guides users through installing, registering, starting, and diagnosing a Cursor My Machines worker on Windows.",
+  "version": "0.1.0",
+  "author": {
+    "name": "HKLHaoBin"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "agent-worker",
+    "my-machines",
+    "windows",
+    "workspace"
+  ]
+}
