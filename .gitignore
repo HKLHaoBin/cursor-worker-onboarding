@@ -1,0 +1,5 @@
+.cursor/
+*.log
+*.log.*
+temp/
+tmp/
